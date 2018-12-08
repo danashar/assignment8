@@ -55,7 +55,7 @@ class App extends React.Component {
       <div id="app">
         <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
           <a className="navbar-brand mr-auto mr-lg-0" id="app-name" href="#">My ToDo list</a>
-          <img src="../todo/images/logo.png" />
+          <img src="../bootstrap/images/logo.png" />
         </nav>
         <Input handleclick={this.hadleSubmit}></Input>
         <OpenTasks tasks={this.state.un_done} handlemark={this.removeItem} deleteListItem={this.deleteListItem}></OpenTasks>
@@ -127,7 +127,7 @@ class OpenTasks extends React.Component {
       <div className="container my-3 p-3 bg-white rounded shadow-sm">
         <h5 className="border-bottom border-gray pb-2 mb-0">Open Tasks</h5>
 
-        {this.state.activities.map((activity, i) => <Activity canDelete="x" itemIndex={i} key={i} text={activity} icon="../todo/images/boxUnchecked.png" handlecheck={this.markV} deleteTask={this.deleteItem}></Activity>)}
+        {this.state.activities.map((activity, i) => <Activity canDelete="x" itemIndex={i} key={i} text={activity} icon="../bootstrap/images/boxUnchecked.png" handlecheck={this.markV} deleteTask={this.deleteItem}></Activity>)}
 
       </div>
     );
@@ -152,7 +152,7 @@ class DoneTasks extends React.Component {
     return (
       <div className="container my-3 p-3 bg-white rounded shadow-sm">
         <h5 className="border-bottom border-gray pb-2 mb-0">Completed Tasks</h5>
-        {this.state.activities.map((activity, i) => <Activity canDelete="" key={i} icon="../todo/images/boxChecked.png" text={activity} handlecheck={this.markV}></Activity>)}
+        {this.state.activities.map((activity, i) => <Activity canDelete="" key={i} icon="../bootstrap/images/boxChecked.png" text={activity} handlecheck={this.markV}></Activity>)}
       </div>
     );
   }
